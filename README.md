@@ -1,0 +1,1 @@
+This is the in-progress website of the Cell2D game development library.
