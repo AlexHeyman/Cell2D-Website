@@ -32,22 +32,57 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/Cell2D/cell2D-1.1.0.zip">Cell2D (version 1.1.0) w/ Slick2D included</a>
+                        <a href="assets/downloads/Cell2D/cell2D-1.1.1.zip">Cell2D (version 1.1.1) w/ Slick2D included</a>
                         <ul>
                             <li>
-                                <a class="ShowHideButton">Changes</a>
+                                <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
-                                    <li>Added SpaceState and its associated classes</li>
-                                    <li>Added CellVector</li>
-                                    <li>Added generic type slots for subclasses of CellGame</li>
-                                    <li>Added more getters for the sizes of hidden collections</li>
+                                    <li>
+                                        Version 1.1.1
+                                        <ul>
+                                            <li>Added Viewport's getWidth() and getHeight() methods</li>
+                                            <li>Viewport's edge setter methods return success or failure instead of throwing an exception if they fail</li>
+                                            <li>Minor Javadoc improvements</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Version 1.1.0
+                                        <ul>
+                                            <li>Added SpaceState and its associated classes</li>
+                                            <li>Added CellVector</li>
+                                            <li>Added generic type slots for subclasses of CellGame in CellGameState, Thinker, and ThinkerState</li>
+                                            <li>Added more getter methods for the sizes of hidden collections</li>
+                                            <li>Minor Javadoc improvements</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Version 1.0.1
+                                        <ul>
+                                            <li>Useless instances of the Assets class can no longer be created</li>
+                                            <li>Cell2D's version number is now printed to the console when a game starts</li>
+                                            <li>Minor Javadoc improvements</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Version 1.0.0
+                                        <ul>
+                                            <li>Initial release</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/Cell2D/cell2D-1.1.0.zip">Version 1.1.0</a></li>
                                     <li><a href="assets/downloads/Cell2D/cell2D-1.0.1.zip">Version 1.0.1</a></li>
                                     <li><a href="assets/downloads/Cell2D/cell2D-1.0.0.zip">Version 1.0.0</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="ShowHideButton">Known issues</a>
+                                <ul class="ShowHide">
+                                    <li>Due to positions in continuous space being stored as floating-point values, Cell2D's standard collision mechanics can occasionally be imprecise and allow objects with collision enabled to pass through moving solid surfaces. Future versions will likely represent positions with fixed-point or arbitrary-precision values to remedy this.</li>
                                 </ul>
                             </li>
                         </ul>
