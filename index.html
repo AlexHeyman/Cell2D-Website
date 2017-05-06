@@ -32,11 +32,19 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/Cell2D/cell2D-1.1.1.zip">Cell2D (version 1.1.1) w/ Slick2D included</a>
+                        <a href="assets/downloads/Cell2D/cell2D-1.2.0.zip">Cell2D (version 1.2.0) w/ Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.2.0
+                                        <ul>
+                                            <li>Cell2D now uses fixed-point numbers in the form of fracunits to represent "continuous" length and time. See the Frac class for more details.</li>
+                                            <li>SpaceThinkers no longer have beforeMovementActions(), as the existence of frameActions() makes them redundant.</li>
+                                            <li>Minor Javadoc improvements have been made.</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.1.1
                                         <ul>
@@ -74,17 +82,17 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/Cell2D/cell2D-1.1.1.zip">Version 1.1.1</a></li>
                                     <li><a href="assets/downloads/Cell2D/cell2D-1.1.0.zip">Version 1.1.0</a></li>
                                     <li><a href="assets/downloads/Cell2D/cell2D-1.0.1.zip">Version 1.0.1</a></li>
                                     <li><a href="assets/downloads/Cell2D/cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
                                 <ul class="ShowHide">
-                                    <li>Due to positions in continuous space being stored as floating-point values, Cell2D's standard collision mechanics can occasionally be imprecise and allow objects with collision enabled to pass through moving solid surfaces. Future versions will likely represent positions with fixed-point or arbitrary-precision values to remedy this.</li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
