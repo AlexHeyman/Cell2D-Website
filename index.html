@@ -24,7 +24,7 @@
                     <li>Efficient organization of objects in 2D space</li>
                     <li>Overlap detection between points, lines, circles, and polygons</li>
                     <li>Built-in basic solid-object collision system</li>
-                    <li>Simple loading and management of graphics, music, and sound effects</li>
+                    <li>Simple management of graphics, music, and sound effects</li>
                     <li>Image manipulation</li>
                 </ul>
             </section>
@@ -32,17 +32,26 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.2.0.zip">Cell2D (version 1.2.0) w/ Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.3.0.zip">Cell2D (version 1.3.0) w/ Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
                                     <li>
+                                        Version 1.3.0
+                                        <ul>
+                                            <li>The Assets class has been removed, as its function is performed more effectively by custom static variables in other classes.</li>
+                                            <li>Support for MOD and XM audio files has been removed, as it was limited and unreliable to begin with.</li>
+                                            <li>Cell2D's methods no longer throw SlickExceptions.</li>
+                                            <li>Fixed a bug that prevented Viewports from rendering SpaceObjects despite having them in their field of view.</li>
+                                            <li>Fixed a bug with the Sound class' stop() method.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         Version 1.2.0
                                         <ul>
                                             <li>Cell2D now uses fixed-point numbers in the form of fracunits to represent "continuous" length and time. See the Frac class for more details.</li>
                                             <li>SpaceThinkers no longer have beforeMovementActions(), as the existence of frameActions() makes them redundant.</li>
-                                            <li>Minor Javadoc improvements have been made.</li>
                                         </ul>
                                     </li>
                                     <li>
@@ -50,7 +59,6 @@
                                         <ul>
                                             <li>Added Viewport's getWidth() and getHeight() methods.</li>
                                             <li>Viewport's edge setter methods return success or failure instead of throwing an exception if they fail.</li>
-                                            <li>Minor Javadoc improvements have been made.</li>
                                         </ul>
                                     </li>
                                     <li>
@@ -60,7 +68,6 @@
                                             <li>Added CellVector.</li>
                                             <li>Added generic type slots for subclasses of CellGame in CellGameState, Thinker, and ThinkerState.</li>
                                             <li>Added more getter methods for the sizes of hidden collections.</li>
-                                            <li>Minor Javadoc improvements have been made.</li>
                                         </ul>
                                     </li>
                                     <li>
@@ -68,7 +75,6 @@
                                         <ul>
                                             <li>Useless instances of the Assets class can no longer be created.</li>
                                             <li>Cell2D's version number is now printed to the console when a game starts.</li>
-                                            <li>Minor Javadoc improvements have been made.</li>
                                         </ul>
                                     </li>
                                     <li>
@@ -82,6 +88,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.2.0.zip">Version 1.2.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.1.1.zip">Version 1.1.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.1.0.zip">Version 1.1.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.1.zip">Version 1.0.1</a></li>
