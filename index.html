@@ -32,11 +32,23 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.3.1.zip">Cell2D (version 1.3.1) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Cell2D (version 1.4.0) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.4.0
+                                        <ul>
+                                            <li>CellGameStates now take their frameActions() before their Thinkers do. As a result, SpaceStates move their assigned ThinkerObjects before their SpaceThinkers' frameActions() are taken, and SpaceThinkers' afterMovementActions() have accordingly been removed and replaced with beforeMovementActions().</li>
+                                            <li>ThinkerGroups have been added, and both CellGameState and Thinker now extend ThinkerGroup.</li>
+                                            <li>ThinkerStates have been removed. Instead, Thinkers can be assigned to other Thinkers.</li>
+                                            <li>TimedEvent now has no generic type fields, and its eventActions() method has no parameters. Those attributes had problems before, and implementing them properly would increase generic type complexity for the sake of only a little convenience.</li>
+                                            <li>SpaceObject's draw() method now has parameters for the edges of the rendering region, just like SpaceLayer's and HUD's renderActions() methods do.</li>
+                                            <li>Viewport's constructor's HUD parameter has been removed.</li>
+                                            <li>Fixed a bug with Viewport rendering.</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.3.1
                                         <ul>
@@ -95,6 +107,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.3.1.zip">Version 1.3.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.0.zip">Version 1.3.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.2.0.zip">Version 1.2.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.1.1.zip">Version 1.1.1</a></li>
