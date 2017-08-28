@@ -19,7 +19,7 @@
                 <h3>Features</h3>
                 <ul>
                     <li>Convenient and precise event scheduling</li>
-                    <li>Compartmentalization of behaviors into states for both objects and the game as a whole</li>
+                    <li>Compartmentalization of object and game state behaviors into modular thinkers</li>
                     <li>Object-level control of the flow of time</li>
                     <li>Efficient organization of objects in 2D space</li>
                     <li>Overlap detection between points, lines, circles, and polygons</li>
@@ -32,11 +32,33 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Cell2D (version 1.4.0) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.4.1.zip">Cell2D (version 1.4.1) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.4.1
+                                        <ul>
+                                            <li>Updated to LWJGL 2.9.3 and JInput build #2841.</li>
+                                            <li>ColorFilter now allows color blending in addition to replacement.</li>
+                                            <li>Added CellGame's isShowingFPS() and setShowFPS() methods.</li>
+                                            <li>Added SpaceState's getSpacePoint() method.</li>
+                                            <li>Added Viewport's getSpacePoint() and getScreenPoint() methods.</li>
+                                            <li>Added Viewport's getLeft(), getRight(), getTop(), and getBottom() methods.</li>
+                                            <li>PolygonHitbox's addRelVertex() methods have been renamed to variants of addVertex().</li>
+                                            <li>ColorFilter now allows color blending as well as replacement.</li>
+                                            <li>SpaceState's frameActions() and updateThinkerListActions() are no longer final.</li>
+                                            <li>Viewport's getLeftEdge(), getRightEdge(), getTopEdge(), and getBottomEdge() methods now have accurate documentation and provide their return values in fracunits.</li>
+                                            <li>Viewports' cameras must now be instances of SpaceObject&lt;T&gt; rather than just SpaceObject.</li>
+                                            <li>Fixed SpaceState's rectangleIsVisible() method.</li>
+                                            <li>Fixed Viewport's getWidth() and getHeight() methods.</li>
+                                            <li>Fixed a bug that prevented certain native libraries from being loaded.</li>
+                                            <li>Fixed a bug that prevented AnimationInstances from properly updating their indices on levels with speeds of 0.</li>
+                                            <li>Fixed a bug that caused commands to be pressed after arbitrary controls were bound to them.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.4.0
                                         <ul>
@@ -107,6 +129,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Version 1.4.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.1.zip">Version 1.3.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.0.zip">Version 1.3.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.2.0.zip">Version 1.2.0</a></li>
@@ -116,14 +139,11 @@
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
                                 <ul class="ShowHide">
-                                    <li>When an index of an AnimationInstance is manually changed using setIndex(), the AnimationInstance does not update its current sprite to reflect the change. Fixed in the GitHub version.</li>
-                                    <li>Viewport's getWidth() and getHeight() methods return values that are inconsistent with their stated behavior in the documentation. Fixed in the GitHub version.</li>
-                                    <li>Viewport's getLeftEdge(), getRightEdge(), getTopEdge(), and getBottomEdge() methods are documented incorrectly. Fixed in the GitHub version.</li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
