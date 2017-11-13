@@ -32,11 +32,29 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.4.1.zip">Cell2D (version 1.4.1) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.5.0.zip">Cell2D (version 1.5.0) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.5.0
+                                        <ul>
+                                            <li>The audio system in general has been revamped. CellGame's music stack can now accommodate multiple Music tracks per priority level, which means that multiple Music tracks can play at once.</li>
+                                            <li>All manipulation of Music tracks not related to their placements on the Music stack is now performed through methods of Music objects.</li>
+                                            <li>Music tracks can now be initialized with loop points.</li>
+                                            <li>Pitch in an audio context has been renamed to speed, and the speed of a Music track can now be faded in a similar manner to its volume.</li>
+                                            <li>Sound's loop() methods have been removed. Instead, whether or not to loop a Sound when playing it is specified with an optional parameter in the play() methods.</li>
+                                            <li>Sprites with limited functionality can now be created from Slick2D Images.</li>
+                                            <li>Loading images have been replaced with CellGame's new renderLoadingVisuals() method.</li>
+                                            <li>Added CellGame's getControlName() and getControl() methods.</li>
+                                            <li>Removed CellGame's getCurrentStateID() method.</li>
+                                            <li>Fixed a bug in which manually setting an AnimationInstance's index at a level other than its highest one would result in an error.</li>
+                                            <li>Fixed bugs in which Hitbox overlaps involving CircleHitboxes, LineHitboxes, or PolygonHitboxes would escape detection in specific situations.</li>
+                                            <li>Fixed a bug in which rotated Sprites were sometimes positioned incorrectly when drawn.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.4.1
                                         <ul>
@@ -128,6 +146,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.4.1.zip">Version 1.4.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Version 1.4.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.1.zip">Version 1.3.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.0.zip">Version 1.3.0</a></li>
@@ -138,15 +157,11 @@
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
                                 <ul class="ShowHide">
-                                    <li>Animation's second constructor's javadoc claims that "Each frame will have a duration of 1," when they will actually have durations of one fracunit each. Fixed in the GitHub version and the online javadoc.</li>
-                                    <li>Hitbox overlaps involving CircleHitboxes, LineHitboxes, or PolygonHitboxes may escape detection in specific situations. Fixed in the GitHub version.</li>
-                                    <li>Manually setting an AnimationInstance's index at a level other than its highest one will result in an error. Fixed in the GitHub version.</li>
-                                    <li>Attempting to display a loading image will result in an error. Fixed in the GitHub version.</li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
