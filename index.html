@@ -32,11 +32,25 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.5.0.zip">Cell2D (version 1.5.0) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.5.1.zip">Cell2D (version 1.5.1) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.5.1
+                                        <ul>
+                                            <li>ThinkerObject's movement functionality has been separated into its new parent class MobileObject, and SpaceState's methods that used ThinkerObjects now use MobileObjects.</li>
+                                            <li>SpaceState's rendering system has been adjusted to prevent illusory jittering in the positions of objects that are moving together with the camera. As a result, methods such as Viewport's get...Edge() methods, getScreenPoint(), getSpacePoint(), and rectangleIsVisible() behave slightly differently.</li>
+                                            <li>Added CellGameState's bindFinishedActions() method.</li>
+                                            <li>Removed CellGame's finishTypingString() method.</li>
+                                            <li>A CellGame now throws a RuntimeException instead of letting itself crash the game if it does not enter its first CellGameState during its initActions().</li>
+                                            <li>Fixed a bug in which the game would crash if certain methods were called on a CellGame that had not entered its first CellGameState.</li>
+                                            <li>Fixed a bug in which MobileObjects would reset their step vectors immediately before moving instead of immediately after.</li>
+                                            <li>Fixed a bug in which stationary CompositeHitboxes would fail to update their boundaries accordingly when a new component was added.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.5.0
                                         <ul>
@@ -146,6 +160,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.5.0.zip">Version 1.5.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.4.1.zip">Version 1.4.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Version 1.4.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.3.1.zip">Version 1.3.1</a></li>
