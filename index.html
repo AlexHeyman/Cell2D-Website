@@ -32,11 +32,22 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.5.1.zip">Cell2D (version 1.5.1) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.5.2.zip">Cell2D (version 1.5.2) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.5.2
+                                        <ul>
+                                            <li>Removed the SpaceObject constructor in which a "creator" SpaceObject was specified, as it was broken for MobileObjects and not very useful to begin with.</li>
+                                            <li>For consistency with its other bulk removal methods, SpaceState's removeAllObjects() method no longer calls clearEmptyCells() at the end.</li>
+                                            <li>Changed the behavior of the Over and Under DrawModes to match that of the Flat DrawMode for SpaceObjects with the same draw priority.</li>
+                                            <li>Fixed a bug with the standard collision detection behavior.</li>
+                                            <li>Fixed a bug in which commands would be erroneously considered held after the game window changed size.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.5.1
                                         <ul>
@@ -160,6 +171,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.5.1.zip">Version 1.5.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.0.zip">Version 1.5.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.4.1.zip">Version 1.4.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.4.0.zip">Version 1.4.0</a></li>
