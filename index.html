@@ -32,11 +32,25 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.5.3.zip">Cell2D (version 1.5.3) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Cell2D (version 1.5.4) with source and Slick2D included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 1.5.4
+                                        <ul>
+                                            <li>Added parameters for the position of the camera on the screen to SpaceLayer's renderActions() method.</li>
+                                            <li>Added Sound and Music's getGlobalVolume() and setGlobalVolume() methods.</li>
+                                            <li>Capped the volumes of Sounds and Music tracks at 1, as volumes greater than 1 did not increase their effective volumes anyway.</li>
+                                            <li>Similarly to CellVector, all AnimationInstance operations now return the AnimationInstance itself.</li>
+                                            <li>Added new constructors for SpaceObject and its subclasses that create SpaceObjects with locator Hitboxes that are new PointHitboxes at specified positions.</li>
+                                            <li>CellVector's equals() and hashCode() methods now consider two CellVectors equal if they represent the same point.</li>
+                                            <li>"Ties" between Thinkers with equal action priorities, SpaceObjects with equal draw priorities, and MobileObjects with equal movement priorities are now broken by comparing the objects' identity hash codes rather than hidden numerical IDs that are greater for more recently created objects.</li>
+                                            <li>Made the Frac class final, as it consists only of static information and cannot be instantiated anyway.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.5.3
                                         <ul>
@@ -179,6 +193,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.5.3.zip">Version 1.5.3</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.2.zip">Version 1.5.2</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.1.zip">Version 1.5.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.0.zip">Version 1.5.0</a></li>
