@@ -1,1 +1,1 @@
-This is the website of the Cell2D game development library.
+Website of the Cell2D game development library
