@@ -64,7 +64,7 @@
                                         <ul>
                                             <li>Removed the SpaceObject constructor in which a "creator" SpaceObject was specified, as it was broken for MobileObjects and not very useful to begin with.</li>
                                             <li>For consistency with its other bulk removal methods, SpaceState's removeAllObjects() method no longer calls clearEmptyCells() at the end.</li>
-                                            <li>Changed the behavior of the Over and Under DrawModes to match that of the Flat DrawMode for SpaceObjects with the same draw priority.</li>
+                                            <li>Tweaked the behavior of the Over and Under DrawModes to match that of the Flat DrawMode for SpaceObjects with the same draw priority and y-coordinate.</li>
                                             <li>Fixed a bug with the standard collision detection behavior.</li>
                                             <li>Fixed a bug in which commands would be erroneously considered held after the game window changed size.</li>
                                             <li>Various internal code tweaks and documentation improvements</li>
