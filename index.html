@@ -10,12 +10,12 @@
     </head>
     <body id="about">
         <header>
-            <nav id="HeaderNav"><a href="#about">About</a><a href="#download">Download</a><a href="javadoc/index.html">Javadoc</a><a href="http://andrewheyman.gitbooks.io/cell2d-documentation/content/">Documentation</a><a href="http://cell2d.forumotion.com/">Forum</a><a href="#contributors" class="HorizontalLast">Contributors</a></nav>
+            <nav id="HeaderNav"><a href="#about">About</a><a href="#download">Download</a><a href="javadoc/index.html">Javadoc</a><a href="https://andrewheyman.gitbooks.io/cell2d-documentation/content/">Documentation</a><a href="https://discord.gg/9XcrGJU">Discord</a><a href="#contributors" class="HorizontalLast">Contributors</a></nav>
         </header>
         <div id="Wrap">
             <img src="assets/images/logo.png" alt="Cell2D" id="Logo">
             <section>
-                <p>Cell2D is a free, open-source Java library for making 2D games, designed to simplify and speed up development by handling common organizational tasks. It is based on and incorporates Slick2D.</p>
+                <p>Cell2D is a free, open-source Java library for making 2D games, designed to simplify and speed up development by handling common organizational tasks. It is based on <a href="http://slick.ninjacave.com/">Slick2D</a>, but operates at a higher level of abstraction.</p>
                 <h3>Features</h3>
                 <ul>
                     <li>Convenient and precise event scheduling</li>
@@ -32,11 +32,34 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Cell2D (version 1.5.4) with source and Slick2D included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-2.0.0.zip">Cell2D (version 2.0.0) with source and javadoc included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 2.0.0
+                                        <ul>
+                                            <li>The names of Cell2D packages are now prefixed with "org.cell2d" instead of simply "cell2d".</li>
+                                            <li>Cell2D no longer uses Slick2D as a dependency. Instead, it incorporates code adapted from Slick2D, largely in the form of back-end "Celick" classes in packages prefixed with "org.cell2d.celick".</li>
+                                            <li>The org.cell2d.control package has been added, replacing Cell2D's use of Slick2D's input system.</li>
+                                            <li>The CellGameState class has been renamed to GameState.</li>
+                                            <li>ThinkerGroup's functionality has been folded into Thinker, and as a result, a GameState is now a type of Thinker. On the other hand, a Thinker's functionality of being assigned to another Thinker has been separated into its new child class SubThinker.</li>
+                                            <li>The org.cell2d.space package's generic type system has been reworked. Similarly to ordinary GameStates and Thinkers, SpaceStates and SpaceThinkers now have generic type parameters for subtypes of SpaceState and SpaceThinker that they interact with. On the other hand, Hitboxes and SpaceObjects have had their generic type parameters removed.</li>
+                                            <li>A ThinkerObject now inherits its SpaceThinker-like properties from a particular SpaceThinker that must be assigned to it. This allows ThinkerObjects to mimic any subtype of SpaceThinker.</li>
+                                            <li>Events and EventGroups have been added to generalize the relationship between the time-dependent actions of Thinkers and those of their SubThinkers. TimedEvent has been removed and its functionality given to Event.</li>
+                                            <li>The org.cell2d.basic and org.cell2d.space.basic packages have been added. They contain simpler but less flexible versions of certain classes for situations in which their full versatility would be excessive.</li>
+                                            <li>Direction is now in the package org.cell2d instead of org.cell2d.space, and its opposite(), clockwise(), and counterclockwise() methods have been added.</li>
+                                            <li>Getter methods that once returned copies of data structures such as Maps and Sets now return unmodifiable views of those data structures.</li>
+                                            <li>Many constructors that once required array parameters now also support varargs.</li>
+                                            <li>A CellGame no longer updates while its window is out of focus.</li>
+                                            <li>Area is now an interface instead of an abstract class.</li>
+                                            <li>PolygonHitboxes with no vertices are now unable to overlap other Hitboxes.</li>
+                                            <li>Some Exception messages have been tweaked.</li>
+                                            <li>Fixed a bug in which Sprites and SpriteSheets would not properly dispose of their resources when unloaded.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 1.5.4
                                         <ul>
@@ -193,6 +216,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Version 1.5.4</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.3.zip">Version 1.5.3</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.2.zip">Version 1.5.2</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.1.zip">Version 1.5.1</a></li>
@@ -208,16 +232,11 @@
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
                                 <ul class="ShowHide">
-                                    <li>Sprites and SpriteSheets do not properly dispose of their resources when unloaded. Fixed in the GitHub version.</li>
-                                    <li>The javadoc sometimes refers to the movement of ThinkerObjects in particular, when in reality ThinkerObjects move identically to all other MobileObjects. Fixed in the GitHub version.</li>
-                                    <li>The explanation in Thinker's javadoc of the order of time-dependent actions among Thinkers assigned to other Thinkers is misleading. Fixed in the GitHub version and the online javadoc.</li>
-                                    <li>Animation's fourth constructor's javadoc claims that "Each frame will have a duration of 1," when they will actually have durations of one fracunit each. Fixed in the GitHub version.</li>
-                                    <li>CellVector.cross()' javadoc claims that it returns the magnitude of the cross product of two CellVectors, when it actually returns the only non-zero component of the cross product. Fixed in the GitHub version.</li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
@@ -226,24 +245,23 @@
             <section>
                 <ul>
                     <li><a href="license.html">License (BSD License 2.0)</a></li>
-                    <li><a href="http://slick.ninjacave.com/">Slick2D</a></li>
                     <li><a href="javadoc/index.html">Cell2D Javadoc</a></li>
                     <li>
-                        <a href="http://andrewheyman.gitbooks.io/cell2d-documentation/content/">Cell2D Documentation</a>
+                        <a href="https://andrewheyman.gitbooks.io/cell2d-documentation/content/">Cell2D Documentation</a>
                         <ul>
-                            <li><a href="http://andrewheyman.gitbooks.io/cell2d-documentation/content/setting-up-cell2d-in-netbeans-ide.html">Setting up Cell2D in NetBeans IDE</a></li>
-                            <li><a href="http://andrewheyman.gitbooks.io/cell2d-documentation/content/setting-up-cell2d-in-eclipse-ide.html">Setting up Cell2D in Eclipse IDE</a></li>
-                            <li><a href="http://andrewheyman.gitbooks.io/cell2d-documentation/content/">Q&amp;A</a></li>
+                            <li><a href="https://andrewheyman.gitbooks.io/cell2d-documentation/content/setting-up-cell2d-in-netbeans-ide.html">Setting up Cell2D in NetBeans IDE</a></li>
+                            <li><a href="https://andrewheyman.gitbooks.io/cell2d-documentation/content/setting-up-cell2d-in-eclipse-ide.html">Setting up Cell2D in Eclipse IDE</a></li>
+                            <li><a href="https://andrewheyman.gitbooks.io/cell2d-documentation/content/">Q&amp;A</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://cell2d.forumotion.com/">Cell2D Forum</a></li>
-                    <li><a href="http://github.com/AndrewHeyman/Cell2D">Cell2D on GitHub</a></li>
+                    <li><a href="https://discord.gg/9XcrGJU">Cell2D Discord Server</a></li>
+                    <li><a href="https://github.com/AndrewHeyman/Cell2D">Cell2D on GitHub</a></li>
                 </ul>
             </section>
             <h1 id="contributors">Contributors</h1>
             <section class="Contributor">
                 <img src="assets/images/contributors/andrewheyman.jpg" alt="Andrew Heyman">
-                <h3><a href="http://www.andrewheyman.org/">Andrew Heyman</a></h3>
+                <h3><a href="https://www.andrewheyman.org/">Andrew Heyman</a></h3>
                 <ul>
                     <li>Programming</li>
                     <li>Documentation</li>

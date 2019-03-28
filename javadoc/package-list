@@ -1,2 +1,5 @@
-cell2d
-cell2d.space
+org.cell2d
+org.cell2d.basic
+org.cell2d.control
+org.cell2d.space
+org.cell2d.space.basic
