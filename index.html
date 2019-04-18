@@ -32,11 +32,23 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-2.0.0.zip">Cell2D (version 2.0.0) with source and javadoc included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-2.0.1.zip">Cell2D (version 2.0.1) with source and javadoc included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide">
+                                    <li>
+                                        Version 2.0.1
+                                        <ul>
+                                            <li>Added ArrayMap and ArraySet.</li>
+                                            <li>During a GameState transition with a visual fade-out, the current GameState's leftActions() method is now called after the fade-out has completed, rather than as it begins.</li>
+                                            <li>ThinkerObject's getTimerValue() and setTimerValue() methods now correctly accept only an Event with the appropriate generic type parameters.</li>
+                                            <li>The Iterators returned by SpaceState's objectIterator() and mobileObjectIterator() methods now correctly throw IllegalStateException in their remove() methods.</li>
+                                            <li>Fixed a bug in which the window of a game in fullscreen mode would not actually take up the entire screen.</li>
+                                            <li>Fixed a bug in which a MobileObject's followers would not follow it when it moved without being assigned to a SpaceState.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 2.0.0
                                         <ul>
@@ -216,6 +228,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-2.0.0.zip">Version 2.0.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Version 1.5.4</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.3.zip">Version 1.5.3</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.2.zip">Version 1.5.2</a></li>
