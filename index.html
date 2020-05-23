@@ -32,11 +32,48 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-2.0.1.zip">Cell2D (version 2.0.1) with source and javadoc included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-2.1.0.zip">Cell2D (version 2.1.0) with dependencies, source, and javadoc included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
-                                <ul class="ShowHide">
+                                <ul class="ShowHide Technical">
+                                    <li>
+                                        Version 2.1.0
+                                        <ul>
+                                            <li>Added the org.cell2d.space.map package, designed primarily for instantiating level maps in SpaceStates. As part of this package, Cell2D can now read information from files created with the map editor <a href="https://www.mapeditor.org/">Tiled</a>, using the new dependency <a href="https://www.alexheyman.org/tiledreader/">TiledReader</a>.</li>
+                                            <li>Added the classes ColorSpaceLayer, DrawableSpaceLayer, BasicEventGroup, BasicSpaceEventGroup, and BasicArea.</li>
+                                            <li>Added the Loadable interface, uniting the loading/unloading features of Sprites, SpriteSheets, Sounds, and Music tracks.</li>
+                                            <li>Filters can now be applied to Sprites created from Celick Images.</li>
+                                            <li>Added a parameter to SpriteSheet for the width of the margin around all of the Sprites on the image.</li>
+                                            <li>Added getSpriteWidth(), getSpriteHeight(), getSpacing(), and getMargin() getter methods to SpriteSheet.</li>
+                                            <li>Made SpriteSheet implement Iterable&lt;Sprite&gt;.</li>
+                                            <li>Added the method Animatable.getInstance().</li>
+                                            <li>Made getWidth() and getHeight() methods of Hitbox and SpaceObject instead of only RectangleHitbox.</li>
+                                            <li>Made it possible for AnimationInstances to be assigned to SpaceObjects without integer IDs.</li>
+                                            <li>Removed the Viewport edge parameters from SpaceObject.draw() and added Drawable.getRenderableRegion() to replace them.</li>
+                                            <li>Made DrawMode a public internal class of SpaceState.</li>
+                                            <li>Dropped AIF(F) file support (which may not have been working anyway).</li>
+                                            <li>Added a constructor to Color that takes a java.awt.Color as input.</li>
+                                            <li>Changed Area.load() to return an Iterable&lt;SpaceObject&gt; instead of the excessively specific Collection&lt;SpaceObject&gt;.</li>
+                                            <li>Changed ColorMapFilter to replace a pixel's RGB value if and only if it had a Map key with the same RGB value and an alpha value of 1. Previously, ColorMapFilter would only replace a pixel's RGB value if it had a Map key with the exact same RGBA value as the pixel.</li>
+                                            <li>Added a singleton-map constructor to ColorMapFilter.</li>
+                                            <li>Renamed Frac.toInt() to Frac.intRound() for consistency with intCeil() and intFloor().</li>
+                                            <li>Tweaked the way SpaceState calculates where on the screen to draw SpaceObjects.</li>
+                                            <li>Removed the useless "clip" feature from the Graphics class (but left the useful "world clip" feature intact).</li>
+                                            <li>Made Animatable and AnimationInstance getter and setter methods throw IndexOutOfBoundsException in response to out-of-range indices, instead of returning default values or doing nothing.</li>
+                                            <li>Made SpriteSheet.getSprite() throw IndexOutOfBoundsException in response to out-of-bounds coordinates.</li>
+                                            <li>Added Exceptions for invalid constructor parameters in SpriteSheet.</li>
+                                            <li>Tweaked some Exception messages to make them more informative.</li>
+                                            <li>Removed an odd behavior in which a Sprite drawn "cropped" to be larger than before would repeat within the cropped area.</li>
+                                            <li>Fixed a null pointer bug that prevented PolygonHitboxes from being constructed.</li>
+                                            <li>Fixed a bug in which Sprites that were both rotated and flipped were drawn at the wrong positions.</li>
+                                            <li>Fixed a bug with the drawing of Sprites that are both cropped and flipped.</li>
+                                            <li>Fixed a bug in which an AnimationInstance added to a GameState with an integer ID could be removed from that state as if it did not have an ID.</li>
+                                            <li>Fixed a bug in which a SpriteSheet's width and height in Sprites would be erroneously set to 0 after unloading.</li>
+                                            <li>Fixed edge-case bugs in which two overlapping Line/Polygon/RectangleHitboxes would not be detected as such.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 2.0.1
                                         <ul>
@@ -228,6 +265,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-2.0.1.zip">Version 2.0.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-2.0.0.zip">Version 2.0.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Version 1.5.4</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.3.zip">Version 1.5.3</a></li>
@@ -245,16 +283,11 @@
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
-                                <ul class="ShowHide">
-                                    <li>Due to a null pointer bug, PolygonHitboxes cannot be constructed. Fixed in the GitHub version.</li>
-                                    <li>In a few edge cases, two overlapping Line/Polygon/RectangleHitboxes will not be detected as such. Fixed in the GitHub version.</li>
-                                    <li>When a SpriteSheet is unloaded, its width and height in Sprites are erroneously set to 0. Fixed in the GitHub version.</li>
-                                    <li>In order to change the color of a pixel, a ColorMapFilter requires that the pixel's alpha value, not just its RGB value, match that of a key in the ColorMapFilter's Map. In the GitHub version, this bug no longer occurs, as ColorMapFilter functions differently.</li>
-                                    <li>Sprites will sometimes be drawn at the wrong positions when both flipped and rotated. Fixed in the GitHub version.</li>
+                                <ul class="ShowHide Technical">
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
@@ -263,9 +296,9 @@
             <section>
                 <ul>
                     <li><a href="license.html">License (BSD License 2.0)</a></li>
-                    <li><a href="javadoc/index.html">Cell2D Javadoc</a></li>
+                    <li><a href="javadoc/index.html">Javadoc</a></li>
                     <li>
-                        <a href="https://cell2d.gitbook.io/cell2d-documentation/">Cell2D Documentation</a>
+                        <a href="https://cell2d.gitbook.io/cell2d-documentation/">Additional documentation</a>
                         <ul>
                             <li><a href="https://cell2d.gitbook.io/cell2d-documentation/tutorials/setting-up-cell2d-in-netbeans-ide">Setting up Cell2D in NetBeans IDE</a></li>
                             <li><a href="https://cell2d.gitbook.io/cell2d-documentation/tutorials/setting-up-cell2d-in-eclipse-ide">Setting up Cell2D in Eclipse IDE</a></li>
@@ -273,7 +306,7 @@
                         </ul>
                     </li>
                     <li><a href="https://discord.gg/9XcrGJU">Cell2D Discord Server</a></li>
-                    <li><a href="https://github.com/AlexHeyman/Cell2D">Cell2D on GitHub</a> (GitHub version uses <a href="https://github.com/AlexHeyman/TiledReader">TiledReader</a> as a dependency)</li>
+                    <li><a href="https://github.com/AlexHeyman/Cell2D">Cell2D on GitHub</a></li>
                 </ul>
             </section>
             <h1 id="contributors">Contributors</h1>

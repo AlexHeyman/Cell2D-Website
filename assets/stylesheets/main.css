@@ -72,6 +72,9 @@ header {
     border-bottom-color: #203040;
     border-bottom-width: 2px;
 }
+.Technical {
+    text-align: left;
+}
 .Contributor {
     min-height: 132px;
     padding: 8px;

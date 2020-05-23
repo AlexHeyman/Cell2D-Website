@@ -3,4 +3,5 @@ org.cell2d.basic
 org.cell2d.control
 org.cell2d.space
 org.cell2d.space.basic
+org.cell2d.space.map
 org.cell2d.util
