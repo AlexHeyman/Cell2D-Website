@@ -33,11 +33,36 @@
             <section>
                 <ul>
                     <li>
-                        <a href="assets/downloads/cell2d/Cell2D-2.1.0.zip">Cell2D (version 2.1.0) with dependencies, source, and javadoc included</a>
+                        <a href="assets/downloads/cell2d/Cell2D-2.1.1.zip">Cell2D (version 2.1.1) with dependencies, source, and javadoc included</a>
                         <ul>
                             <li>
                                 <a class="ShowHideButton">Changelog</a>
                                 <ul class="ShowHide Technical">
+                                    <li>
+                                        Version 2.1.1
+                                        <ul>
+                                            <li>Updated to TiledReader version 1.1.0, for Tiled 1.4.x.</li>
+                                            <ul>
+                                                <li>Added layer tint color support to TiledArea.</li>
+                                                <li>Made TiledConverter into an instantiable class, each instance of which interfaces with an instance of the FileSystemTiledReader class.</li>
+                                            </ul>
+                                            <li>Added the getTransColor() method to TiledArea.</li>
+                                            <li>Made it so the List that TiledConverter.getSprites() returns in response to an image collection tileset is unmodifiable.</li>
+                                            <li>Added the ColorMultiplyFilter class.</li>
+                                            <li>Exposed Filter.getFilteredImage(), allowing for custom subclasses of Filter.</li>
+                                            <li>(Celick) Added Image.getBlankCopy().</li>
+                                            <li>Added semantic equals() and hashCode() methods to ColorFilter and ColorMapFilter.</li>
+                                            <li>Made methods that take a set of Filters as a parameter take them as varargs.</li>
+                                            <li>Added Animatable.getSprites() and Animatable.getFilteredCopy(), replacing Sprite's Sprite+Filter constructor.</li>
+                                            <li>Made Hitbox subclasses' getCopy() methods all final, and made their return types subclass-specific.</li>
+                                            <li>Made the equals() and hashCode() methods of Control subclasses final.</li>
+                                            <li>Removed Cell2D's dependency on JavaFX.</li>
+                                            <li>Sprites created from Celick Images can now have applicable Filters, as their constructors previously promised.</li>
+                                            <li>Fixed a bug in which filtered images with transparency would come out more transparent than they should be.</li>
+                                            <li>Fixed a bug in which animated TiledArea tiles would animate at a speed of 0 by default.</li>
+                                            <li>Various internal code tweaks and documentation improvements</li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         Version 2.1.0
                                         <ul>
@@ -266,6 +291,7 @@
                             <li>
                                 <a class="ShowHideButton">Older versions</a>
                                 <ul class="ShowHide">
+                                    <li><a href="assets/downloads/cell2d/Cell2D-2.1.0.zip">Version 2.1.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-2.0.1.zip">Version 2.0.1</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-2.0.0.zip">Version 2.0.0</a></li>
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.5.4.zip">Version 1.5.4</a></li>
@@ -284,13 +310,11 @@
                                     <li><a href="assets/downloads/cell2d/Cell2D-1.0.0.zip">Version 1.0.0</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a class="ShowHideButton">Known issues</a>
                                 <ul class="ShowHide Technical">
-                                    <li>Sprites created from Celick Images have no applicable Filters, despite what their constructors promise. Fixed in the GitHub version.</li>
-                                    <li>Filtered images with transparency may come out more transparent than they should be. Fixed in the GitHub version.</li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
